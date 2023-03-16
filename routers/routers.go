@@ -16,9 +16,7 @@ func InitRouter() *gin.Engine {
 	api := r.Group("/api")
 
 	{
-		api.GET("/index", openapi.Index)
-		api.GET("/home", openapi.Home)
-		api.GET("/tag", openapi.GetTags)
+		api.POST("/manage/login", openapi.Login)
 	}
 
 	return r
